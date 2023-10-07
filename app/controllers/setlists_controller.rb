@@ -5,12 +5,12 @@ class SetlistsController < ApplicationController
   def index
     @setlists = Setlist.all
 
-    render json: @setlists.includes(:musics).to_json(include: :musics)
+    render json: @setlists.includes(:music_setlists, :musics).to_json(include: [:music_setlists, :musics])
   end
 
   # GET /setlists/1
   def show
-    render json: @setlists.includes(:musics)
+    render json: @setlists.includes(:music_setlists, :musics)
   end
 
   # POST /setlists
@@ -46,6 +46,6 @@ class SetlistsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def setlist_params
-      params.require(:setlist).permit(:name, :date, music_ids: [])
+      params.require(:setlist).permit(:name, :date, music_setlists_attributes: [:id, :music_id, :setlist_id, :position, :_destroy])
     end
 end
