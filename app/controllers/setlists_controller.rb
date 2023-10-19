@@ -27,7 +27,7 @@ class SetlistsController < ApplicationController
   # PATCH/PUT /setlists/1
   def update
     if @setlist.update(setlist_params)
-      render json: @setlist
+      render json: @setlist.to_json(include: [:music_setlists, :musics])
     else
       render json: @setlist.errors, status: :unprocessable_entity
     end

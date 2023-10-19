@@ -1,0 +1,14 @@
+Novas Features:
+    ☐ Ensaios
+    ☐ BPM das músicas
+    ☐ Exportar para o Spotify
+    ☐ Exportar para o YouTube
+    ☐ Duplicar repertório
+    ☐ Tags nas músicas
+        ☐ Mostrar as tags no card de música
+        ☐ Filtrar a lista de músicas por tags
+
+Fixes:
+    ☐ music/create voltar para onde estava
+    ☐ Criar nova música a partir do repertório
+    ☐ repertoire/:id voltar para a lista de repertórios

@@ -41,6 +41,9 @@ gem "bootsnap", require: false
 # For extracting content from CifraClub
 gem 'nokogiri'
 
+# For exporting setlists to trello
+gem 'ruby-trello'
+
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
